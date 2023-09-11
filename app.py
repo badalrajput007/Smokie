@@ -60,7 +60,7 @@ class VideoProcessor:
         blk = np.sum(pred == 0)
         pers = round(wht/(wht+blk)*100, 2)
         ovrly = overlay_img(o_img, 1, predicted_mask, 0.8)
-        cv.putText(ovrly, "Smoke "+str(pers)+("%"), (2,25), cv.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 1)
+        cv.putText(ovrly, "Smoke "+str(pers)+("%"), (2,25), cv.FONT_HERSHEY_COMPLEX, 1, (255,0 0), 1)
         return av.VideoFrame.from_ndarray(ovrly, format="bgr24")
 
 ctx = webrtc_streamer(key="SmokeDetector", 
