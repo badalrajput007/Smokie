@@ -24,6 +24,9 @@ RTC_CONFIGURATION = RTCConfiguration(
     {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
 )
 
+st.sidebar.write('Efficient Real-Time Smoke Detection Module')
+st.sidebar.markdown('''This module uses Efficient Net + Yolo5 based smoke detection model to detect smoke in the slightest part and alert''')
+
 def overlay_img(img, alpha1, mask, alpha2):
     img_h, img_w, img_ch = img.shape
     msk_h, msk_w, msk_ch = mask.shape
