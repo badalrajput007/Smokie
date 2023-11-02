@@ -20,6 +20,18 @@ i = 0
 n = 0
 ct = 0
 
+# Add custom CSS to hide the GitHub icon and fork app logo
+custom_css = """
+<style>
+.css-1g7mpaj-Image,
+.css-1n9erby-Image {
+    display: none;
+}
+</style>
+"""
+
+st.markdown(custom_css, unsafe_allow_html=True)
+
 RTC_CONFIGURATION = RTCConfiguration(
     {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
 )
